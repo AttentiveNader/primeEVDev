@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;  
+}
+
+.nav-header:hover{
+    cursor: pointer;
+}
+
+body {
+    margin: 0px;
+    background-color: #FFFFFF;
+    font-family: 'segoe ui';
+    margin-top: 220px;
+    height: 100%;
+}  
+
+/* =============== Navbar =================== */
+.nav {
+    height: 210px;
+    z-index: 12000;
+    top:0;
+    width: 100%;
+    background-image: linear-gradient(to left, #1D3159 0%, 11.502347141504288%, #3F476B 23.004694283008575%, 27.288732677698135%, #4B5173 31.572771072387695%, 32.45305269956589%, #4E5475 33.33333432674408%, 36.73709034919739%, #5B5E7E 40.140846371650696%, 47.30047136545181%, #767591 54.46009635925293%, 60.856810212135315%, #9594AA 67.2535240650177%, 68.25117468833923%, #9A98AD 69.24882531166077%, 70.83333432674408%, #A09EB3 72.41784334182739%, 75%, #B0AEBF 77.58215665817261%, 79.57746386528015%, #B9B7C6 81.5727710723877%, 83.45070481300354%, #BFBECB 85.32863855361938%, 85.79812347888947%, #C5C4D0 86.26760840415955%, 87.67605721950531%, #CECDD6 89.08450603485107%, 94.54225301742554%, #F3F2F5 100%);
+    position: fixed;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title  {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 45px;
+}
+.nav > .nav-header > .nav-title > img  {
+    height: 80%;
+    width: 75%;
+}
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    font-size: 150%;
+    margin-top: 130px;
+    position: fixed;
+    right: 0%;
+    margin-right: 8% ; 
+}
+
+.nav > .nav-links > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    height:25%;
+    font-weight:bold;
+    padding-right: 8px;
+}
+
+.nav > .nav-links > #shopping-cart{
+    display: inline;
+    size: 30px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+.nav > .sign-links {
+    display: inline;
+    float: right;
+    font-size: 150%;
+    margin-top: 3%;
+    margin-right: 4%;
+}
+
+.nav > .sign-links > a {
+    color: #FFFFFF;
+    padding-right: 2px;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.nav > .nav-links > a:hover , .nav > .sign-links > a:hover {
+    color: #DC5718;
+}
+
+
+.nav > #nav-check {
+    display: none;
+}
+
+  /* ======================= footer ==================== */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    min-height:300px ;
+    width: 100%;
+    background-color:#213259; 
+    /* position: absolute;
+    bottom: 0;  */
+    overflow: hidden;
+}
+
+.leftPart{
+    width: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    color: #FFFFFF;
+    margin-left: 20px;
+
+}
+
+.leftPart > #upperPart{
+    width: 100%;
+    left: 0;
+    display: flex;
+    float: left;
+    color: #FFFFFF;
+    padding-right: 20px;
+    margin-right: 20px; 
+}
+
+.leftPart > #upperPart >h2{
+    font-weight: bold;
+}
+
+.info{
+    flex-direction: column;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.leftPart  ul{
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.leftPart .info  li{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.leftPart .info li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.rightPart{
+    right: 0;
+    width: 50%;
+}
+
+#lowerPart{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#labelSignup{
+    margin-right: 20px;
+}
+
+#lowerPart > input{
+    border-radius: 2px;
+    margin-top: 5px;
+    width: 40%;
+    height: 30px;
+    background-color: #ccd7ff;
+}
+
+#lowerPart > input:focus{
+    background-color: #FFFFFF;
+}
+
+#footerParagraph{
+    font-size: 20px;
+    color:  #FFFFFF;
+    margin-right: 50%;
+}
+
+#footerLogo{
+    float: right;
+}

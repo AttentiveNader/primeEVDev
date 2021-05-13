@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+ 
+</head>
+<body> -->
+
+  {% extends 'base.html' %} 
+  {% load static %}
+  {% block title %}Contact us{% endblock %}
+  {% block headscripts %} 
+    <link rel="stylesheet" href="{% static 'css/contactUs.css' %}">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+ {% endblock %}
+  {% block content %} 
+   <div class="contact-us-container">
+        <h1>Contact Us</h1>
+        <div class="contact-grid">
+            <div class="contact-information">
+                <div class="information-row"><i class="fas fa-envelope-open-text"></i> Primeev@gmail.com</div>
+                <div class="information-row"><i class="fas fa-phone-alt"></i> 20123457890</div>
+                <div class="information-row"><i class="fas fa-map-marker-alt"></i> 34, madinet nasr</div>
+                <div id="map"></div>
+            </div>
+            <div class="contact-form">
+                <h2>Get in touch</h2>
+                <div class="input-block">
+                  <label>Name:</label>
+                  <input class="input" type="text" name="name" id="userName" placeholder="John Doe" required>
+                </div>
+                <div class="input-block">
+                  <label>Email:</label>
+                  <input class="input" type="email" name="email" id="userEmail" placeholder="johndoe@mail.com" equired>
+                </div>
+                <div class="input-block">
+                  <label>Phone:</label>
+                  <input class="input" type="text" name="phone" id="userPhone" placeholder="1274763600" required>
+                </div>
+                <div class="input-block">
+                  <label>Message:</label>
+                  <textarea class="input" name="message" id="userMessage" cols="30" rows="5"></textarea>
+                </div>
+                <div  class="input-block" id="contact-error"> <i class="fas fa-times"></i> <span>test message </span></div>
+                <div class="input-block">
+                  <input class="btn submit" type="button" onclick="handleSubmit()" name="submit" value="Submit" id="submitBtn">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+      <!-- Your Chat plugin code -->
+      <div class="fb-customerchat"
+        attribution="page_inbox"
+        page_id="310512086075093">
+      </div>
+    
+{% endblock %}
+
+
+{% block jsScripts %}
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC420gbvUGPv7OH7pYjVTE_dwrw_JjVQEo&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <script src="{% static 'js/contactUs.js' %}"></script>
+{% endblock%}

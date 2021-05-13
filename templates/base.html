@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  {% block headscripts%} {% endblock%}
+</head>
+
+<body>
+  <!--Top Nav Bar-->
+  <div id="nav" class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img id='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+      </label>
+    </div>
+      <div class = "sign-links">
+        <a href="#">Sign Up</a>
+        <span style="color: #FFFFFF;">| </span>
+        <a href="#">Login</a>
+      </div>
+      <div class="nav-links">
+        <a href="Home.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">How It Works</a>
+        <a href="#">Services</a>
+        <a href="./ContactUs.html">Contact Us</a>
+        <a  href="#">Blog</a>
+        <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
+      </div>    
+  </div>
+
+  <script>
+    document.getElementById('logo').addEventListener("click", () => {
+      window.location.replace("Home.html");
+    })
+    function hover() {
+      document.getElementById("shopping-cart").src = "{% static 'imgs/shopping-cart-hover.png' %}";
+    }
+    function out() {
+      document.getElementById("shopping-cart").src = " {% static 'imgs/shopping-cart.png' %} ";
+    }
+  </script>
+  {% block content %}
+  {% endblock %}
+
+
+</body>
+
+<footer>
+      <div class ="leftPart">
+        <div id = "upperPart">
+          <div class="info">
+            <h2>COMPANY</h2>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h2>EV INFO</h2>
+            <ul>
+              <li><a href="#">How It Works</a></li>
+              <li><a href="#">Stations</a></li>
+              <li><a href="#">Charging Card</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h2>SHOP</h2>
+            <ul>
+              <li><a href="#">Ev Products</a></li>
+              <li><a href="#">Cart & Checkout</a></li>
+              <li><a href="#">My Account</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h2>CONTACT US</h2>
+            <ul>
+              <li><a href="mailto: Primeev@gmail.com">Primeev@gmail.com</a></li>
+              <li><a href="#">20123456789</a></li>
+              <li><a href="#">Prime Ev Egypt</a></li>
+            </ul>
+          </div>
+      </div>
+      <div id = "lowerPart">
+        <div id="labelSignup"><label>Sign up for our<br>newsletters</label></div>
+        <input type="text">
+      </div>
+    </div>
+    <div class="rightPart">
+      <div id="footerParagraph">
+        <p>FOR AN INTELLIGENT ENERGY DAILY PRIME EV IS THE SMART CHOICE</p>
+      </div> 
+      <div id="footerLogo">
+        <img id='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+      </div>
+    </div>
+</footer>
+
+{% block jsScripts %}{% endblock%}
+
+</html>
