@@ -10,3 +10,12 @@ def home(request):
 @never_cache
 def contactUs(request):
     return render(request, 'homePage/contactUs.html')
+
+@never_cache
+def signIn(request):
+    return render(request, 'logInSignUp/LogIn.html')
+
+@never_cache
+def signUp(request):
+    return render(request, 'logInSignUp/SignUp.html')
+

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  {% block headscripts%} {% endblock%}
+  {% block headscripts%} {% endblock headscripts %}
 </head>
 
 <body>
@@ -28,16 +28,16 @@
       </label>
     </div>
       <div class = "sign-links">
-        <a href="#">Sign Up</a>
+        <a href="../Sign-Up/">Sign Up</a>
         <span style="color: #FFFFFF;">| </span>
-        <a href="#">Login</a>
+        <a href="../Sign-In">Login</a>
       </div>
       <div class="nav-links">
-        <a href="Home.html">Home</a>
+        <a href="../">Home</a>
         <a href="#">About Us</a>
         <a href="#">How It Works</a>
         <a href="#">Services</a>
-        <a href="./ContactUs.html">Contact Us</a>
+        <a href="../contactUs/">Contact Us</a>
         <a  href="#">Blog</a>
         <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
       </div>    
