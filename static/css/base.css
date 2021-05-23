@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
+
+
+:root {
+    /* the variables */
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+    --success-color:#22bb33;
+    --contactColor: #1c1c3d;
+    --navbar-height:165px;
+    --their-orange:#dd5717;
+  }
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;  
@@ -13,13 +26,13 @@ body {
     margin: 0px;
     background-color: #FFFFFF;
     font-family: 'segoe ui';
-    margin-top: 220px;
+    margin-top: var(--navbar-height);
     height: 100%;
 }  
 
 /* =============== Navbar =================== */
 .nav {
-    height: 165px;
+    height: var(--navbar-height);
     z-index: 12000;
     top:0;
     width: 100%;
@@ -37,14 +50,15 @@ body {
 }
 
 .nav > .nav-header > .nav-title  {
-    display: inline-block;
+    display: block;
     /* margin-top: 50px; */
     margin-top:10px;
     margin-left: 45px;
+    max-width: 350px;
 }
 .nav > .nav-header > .nav-title > img  {
     height: 80%;
-    width: 75%;
+    width: 100%;
 }
 .nav > .nav-btn {
     display: none;
@@ -64,7 +78,6 @@ body {
     margin-top: 50px;
     float: right;
     margin-right: 50px;
-    /* margin-right: 8%; */
 }
 
 .nav > .nav-links > a {
@@ -88,7 +101,7 @@ body {
 }
 
 .nav > .sign-links {
-    display: inline;
+    display: block;
     float: right;
     font-size: 150%;
     margin-top: 3%;
