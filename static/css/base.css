@@ -1,52 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&display=swap");
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;  
 }
 
-.nav-header:hover{
+.nav-header:hover {
     cursor: pointer;
 }
 
 body {
     margin: 0px;
-    background-color: #FFFFFF;
-    font-family: 'segoe ui';
+    background-color: #ffffff;
+    font-family: "segoe ui";
     margin-top: 220px;
     height: 100%;
-}  
+}
 
 /* =============== Navbar =================== */
 .nav {
+    font-family: "Baskervville";
     height: 165px;
     z-index: 12000;
-    top:0;
+    top: 0;
     width: 100%;
-    background-image: linear-gradient(to left, #1D3159 0%, 11.502347141504288%, #3F476B 23.004694283008575%, 27.288732677698135%, #4B5173 31.572771072387695%, 32.45305269956589%, #4E5475 33.33333432674408%, 36.73709034919739%, #5B5E7E 40.140846371650696%, 47.30047136545181%, #767591 54.46009635925293%, 60.856810212135315%, #9594AA 67.2535240650177%, 68.25117468833923%, #9A98AD 69.24882531166077%, 70.83333432674408%, #A09EB3 72.41784334182739%, 75%, #B0AEBF 77.58215665817261%, 79.57746386528015%, #B9B7C6 81.5727710723877%, 83.45070481300354%, #BFBECB 85.32863855361938%, 85.79812347888947%, #C5C4D0 86.26760840415955%, 87.67605721950531%, #CECDD6 89.08450603485107%, 94.54225301742554%, #F3F2F5 100%);
+    background-image: linear-gradient(to left,
+            #1d3159 0%,
+            11.502347141504288%,
+            #3f476b 23.004694283008575%,
+            27.288732677698135%,
+            #4b5173 31.572771072387695%,
+            32.45305269956589%,
+            #4e5475 33.33333432674408%,
+            36.73709034919739%,
+            #5b5e7e 40.140846371650696%,
+            47.30047136545181%,
+            #767591 54.46009635925293%,
+            60.856810212135315%,
+            #9594aa 67.2535240650177%,
+            68.25117468833923%,
+            #9a98ad 69.24882531166077%,
+            70.83333432674408%,
+            #a09eb3 72.41784334182739%,
+            75%,
+            #b0aebf 77.58215665817261%,
+            79.57746386528015%,
+            #b9b7c6 81.5727710723877%,
+            83.45070481300354%,
+            #bfbecb 85.32863855361938%,
+            85.79812347888947%,
+            #c5c4d0 86.26760840415955%,
+            87.67605721950531%,
+            #cecdd6 89.08450603485107%,
+            94.54225301742554%,
+            #f3f2f5 100%);
     position: fixed;
 }
 
 .nav * {
-    font-family: 'Baskervville' !important;
-
+    font-family: "Baskervville" !important;
 }
-.nav > .nav-header {
+
+.nav>.nav-header {
     display: inline;
-    float:left;
+    float: left;
 }
 
-.nav > .nav-header > .nav-title  {
+.nav>.nav-header>.nav-title {
     display: inline-block;
     /* margin-top: 50px; */
-    margin-top:10px;
+    margin-top: 10px;
     margin-left: 45px;
 }
-.nav > .nav-header > .nav-title > img  {
+
+.nav>.nav-header>.nav-title>img {
     height: 80%;
     width: 75%;
 }
-.nav > .nav-btn {
+
+.nav>.nav-btn {
     display: none;
 }
 
@@ -58,7 +89,7 @@ body {
     right: 0%;
     margin-right: 8% ; 
 } */
-.nav > .nav-links {
+.nav>.nav-links {
     display: block;
     font-size: 150%;
     margin-top: 50px;
@@ -67,16 +98,15 @@ body {
     /* margin-right: 8%; */
 }
 
-.nav > .nav-links > a {
-    
-    color: #FFFFFF;
+.nav>.nav-links>a {
+    color: #ffffff;
     text-decoration: none;
-    height:25%;
-    font-weight:bold;
+    height: 25%;
+    /*font-weight:bold;*/
     padding-right: 8px;
 }
 
-.nav > .nav-links > #shopping-cart{
+.nav>.nav-links>#shopping-cart {
     display: inline-block;
     /* size: 30px; */
     width: 30px;
@@ -87,7 +117,7 @@ body {
     cursor: pointer;
 }
 
-.nav > .sign-links {
+.nav>.sign-links {
     display: inline;
     float: right;
     font-size: 150%;
@@ -95,149 +125,101 @@ body {
     margin-right: 4%;
 }
 
-.nav > .sign-links > a {
-    color: #FFFFFF;
+.nav>.sign-links>a {
+    color: #ffffff;
     padding-right: 2px;
     text-decoration: none;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 
-.nav > .nav-links > a:hover , .nav > .sign-links > a:hover {
-    color: #DC5718;
+.nav>.nav-links>a:hover,
+.nav>.sign-links>a:hover {
+    color: #dc5718;
 }
 
-
-.nav > #nav-check {
+.nav>#nav-check {
     display: none;
 }
 
-@media (max-width:600px) {
-    .nav > .sign-links {
-        display: none;
-    }
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .nav > .nav-btn > label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    .nav > .nav-btn > label > span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid midnightblue;
-    }
-    .nav > .nav-links {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: #dcdce8;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-    }
-    .nav > .nav-links > a {
-      display: block;
-      width: 100%;
-      height: fit-content;
-      
-    }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
-    .nav > #nav-check:checked ~ .nav-links {
-      height: calc(100vh - 50px);
-      overflow-y: auto;
-    }
-  }
+/* ======================= footer ==================== */
 
-  /* ======================= footer ==================== */
-
-footer{
+footer {
     display: flex;
     flex-direction: row;
-    min-height:300px ;
+    min-height: 300px;
     width: 100%;
-    background-color:#213259; 
-    /* position: absolute;
-    bottom: 0;  */
+    background-color: #213259;
     overflow: hidden;
+    font-family: "Baskervville";
+    bottom: 0;
 }
 
-.leftPart{
+.leftPart {
     width: 50%;
     left: 0;
     display: flex;
     flex-direction: column;
     float: left;
-    color: #FFFFFF;
-    margin-left: 20px;
-
+    color: #ffffff;
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
-.leftPart > #upperPart{
+.leftPart>#upperPart {
     width: 100%;
     left: 0;
     display: flex;
     float: left;
-    color: #FFFFFF;
+    color: #ffffff;
     padding-right: 20px;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
-.leftPart > #upperPart >h2{
+footer>.leftPart>#upperPart h2 {
     font-weight: bold;
+    font-size: 1.3em;
+    color: #ffffff;
 }
 
-.info{
+.infoA, .infoB {
     flex-direction: column;
     margin-right: 50px;
     text-align: center;
 }
 
-.leftPart  ul{
+.leftPart ul {
     margin-top: 20px;
     padding-left: 0;
 }
 
-.leftPart .info  li{
+.leftPart .infoA li, .leftPart .infoB li {
     list-style-type: none;
     margin-top: 10px;
 }
 
-.leftPart .info li a{
+.leftPart .infoA li a, .leftPart .infoB li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 15px;
 }
 
-.rightPart{
+.rightPart {
     right: 0;
     width: 50%;
+    text-align: center;
 }
 
-#lowerPart{
+#lowerPart {
     display: flex;
     margin-top: 25px;
     margin-left: 25px;
 }
 
-#labelSignup{
+#labelSignup {
     margin-right: 20px;
 }
 
-#lowerPart > input{
+#lowerPart>input {
     border-radius: 2px;
     margin-top: 5px;
     width: 40%;
@@ -245,16 +227,199 @@ footer{
     background-color: #ccd7ff;
 }
 
-#lowerPart > input:focus{
-    background-color: #FFFFFF;
+#lowerPart>input:focus {
+    background-color: #ffffff;
 }
 
-#footerParagraph{
-    font-size: 20px;
-    color:  #FFFFFF;
-    margin-right: 50%;
+.rightPart>p {
+    font-size: 25px;
+    width: auto;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-left: 1%;
 }
 
-#footerLogo{
+footer i {
+    margin-right: 0.5em;
+    color: #ffffff;
+}
+
+footer img {
+    height: 8em;
+    width: 18em;
+    margin-right: 30px;
     float: right;
+    margin-top: 5px;
+}
+
+/*****Mobile View*****/
+
+@media (max-width: 600px) {
+
+    /***** NavBar******/
+    .nav {
+        height: 130px;
+    }
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: #213259;
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 3px solid #ffffff;
+    }
+
+    .nav>.sign-links {
+        display: inline;
+        float: right;
+        margin-top: -4px;
+    }
+
+    .nav>.sign-links>a,
+    .nav>.sign-links>span {
+        font-size: 17px;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #213259;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    /***** Footer ****/
+
+    footer {
+        display:block;
+        min-height: 300px;
+        width: 100%;
+        background-color: #213259;
+        overflow: hidden;
+        font-family: "Baskervville";
+        bottom: 0;
+    }
+
+    .leftPart {
+        width: 100%;;
+        color: #ffffff;
+        margin-top: 5px;
+        margin-left: 8px;
+    }
+
+    .leftPart>#upperPart {
+        width: 100%;
+        float: right;
+        color: #ffffff;
+        display: block;
+    }
+
+    footer>.leftPart>#upperPart h2 {
+        font-weight: bold;
+        font-size: 1em;
+        color: #ffffff;
+    }
+
+    .infoA {
+        float: left;
+        width: 50%;
+        text-align: center;
+        display:block;
+        margin-right: 0px;
+    }
+
+    .infoB {
+        width: 50%;
+        float: right;    
+        text-align: center;
+        display:block;
+        margin-right: 0px;
+    }
+
+    .leftPart ul {
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
+    .leftPart .infoA li, .leftPart .infoB li {
+        list-style-type: none;
+        margin-top: 10px;
+    }
+
+    .leftPart .info li a, .leftPart .infoB li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 15px;
+    }
+
+    #lowerPart{
+        margin-top: 2px;
+    }
+
+    .rightPart {
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .rightPart{
+        display: inline-block;
+    }
+
+    .rightPart>p {
+        font-size: 10px;
+        width: 50%;
+        float: left;
+    }
+
+    footer i {
+        margin-right: 2px;
+        color: #ffffff;
+    }
+
+    footer img {
+        height: 20%;
+        width: 40%;
+        float: right;
+        margin-top: 20px;
+        margin-right: 2px;
+    }
 }
