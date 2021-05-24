@@ -14,14 +14,23 @@
     <div class="log-in">
         <img class='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
         <div class="content">
-            <input class='special-input' type="text" placeholder="Username" name="username" required>
-            <input class='special-input' type="text" placeholder="Email" name="email" required>
-            <input class='special-input' type="password" placeholder="Password" name="psw" required>
-            <input class='special-input' type="password" placeholder="Confirm Password" name="psw-repeat" required>
-            <div class="remember-me">
-                <button type="submit" class="special-btn">SignUp</button>
+            <form method="POST">
+                {% csrf_token %}
+                    {{ form }}
+                <div class='submit-div'>
+                    <button type="submit" class="special-btn">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+            <div class = "border-top pt-3">
+                <small class="text-muted">
+                    Already have an account ?
+                    <a class="ml-2" href="{% url 'login' %}">
+                        Sign In
+                    </a>
+                </small>
             </div>
-            <a class="sign-up" href='#'>LogIn</a>
         </div>
     </div>    
 </body>
