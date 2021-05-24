@@ -19,3 +19,6 @@ def signIn(request):
 def signUp(request):
     return render(request, 'logInSignUp/SignUp.html')
 
+@never_cache
+def aboutUs(request):
+    return render(request, 'homePage/aboutUs.html')

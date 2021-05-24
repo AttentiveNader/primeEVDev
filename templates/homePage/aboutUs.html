@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block headscripts %} 
+<link rel="stylesheet" href="{% static 'css/aboutUs.css' %}">
+{% endblock%}
+
+{% block title %} About US {% endblock %}
+{% block content %}
+<h1>About Us</h1> 
+<div class = "aboutUsContainer">
+    <div class = "explore">
+        <div id = "vision">
+            <h2>Our Vision</h2>
+            <p>To Be the World’s Most Trusted Partner for Ev Chargers.<br>
+                To Be Egypt Leader in Electric Vehicle Charging by Getting 1000 Charging Stations.<br></p>
+        </div>
+        <div id = "mission">
+            <h2>Our Mission</h2>
+            <p>We can achieve a better future together when you choose to work with us by<br>
+                Bringing quality, safety and sustainability to life.<br></p>
+        </div>
+    </div>
+    <div class = "partners">
+        <h2>Partners</h2>
+        <p>In Collaboration With Our Successful partners, We have always looked at the future to find the<br>
+            drive and energy needed to carry out, We cooperate with strategic partners in several industries<br>
+            to ensure the best charging basis for residents, businesses and cities, home.</p>
+            <div class = "partnersLogos">
+                <img src = "{% static 'imgs/Partner logo.png' %}">
+                <img src = "{% static 'imgs/Partner logo 2.png' %}">
+            </div>
+    </div>
+    <div class = "solutions">
+        <h2>Solutions</h2>
+        <p>Our Smart Chargers Are Perfect Fit For:<br></p>
+        <img src = "{% static 'imgs/solutions.png' %}">
+    </div>
+</div>
+{% endblock %}

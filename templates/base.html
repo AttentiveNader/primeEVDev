@@ -25,40 +25,44 @@
         <span></span>
       </label>
     </div>
-   
+
     {% comment %} <div> {% endcomment %}
-    <div class="nav-header">
-      <div class="nav-title">
-        <img id='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+      <div class="nav-header">
+        <div class="nav-title">
+          <img id='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+        </div>
       </div>
-    </div>
-     <div class = "sign-links">
+      <div class="sign-links">
         <a href="../Sign-Up/">Sign Up</a>
         <span style="color: #FFFFFF;">| </span>
         <a href="../Sign-In">Login</a>
       </div>
-    
-    
-      
-    {% comment %} </div> {% endcomment %}
-      <div class="nav-links">
-        <a href="../">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">How It Works</a>
-        <a href="#">Services</a>
-        <a href="../contactUs/">Contact Us</a>
-        <a  href="#">Blog</a>
-        <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
-      </div>    
+
+
+
+      {% comment %}
+    </div> {% endcomment %}
+    <div class="nav-links">
+      <a href="../">Home</a>
+      <a href="../aboutUs/">About Us</a>
+      <a href="#">How It Works</a>
+      <a href="#">Services</a>
+      <a href="../contactUs/">Contact Us</a>
+      <a href="#">Blog</a>
+      <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()"
+        onmouseout="out()">
+    </div>
   </div>
 
   <script>
     document.getElementById('logo').addEventListener("click", () => {
       window.location.replace("/");
     })
+
     function hover() {
       document.getElementById("shopping-cart").src = "{% static 'imgs/shopping-cart-hover.png' %}";
     }
+
     function out() {
       document.getElementById("shopping-cart").src = " {% static 'imgs/shopping-cart.png' %} ";
     }
@@ -70,50 +74,50 @@
 </body>
 
 <footer>
-      <div class ="leftPart">
-        <div id = "upperPart">
-          <div class="infoA">
-            <h2>COMPANY</h2>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">Partners</a></li>
-            </ul>
-          </div>
-          <div class="infoB">
-            <h2>EV INFO</h2>
-            <ul>
-              <li><a href="#">How It Works</a></li>
-              <li><a href="#">Stations</a></li>
-              <li><a href="#">Charging Card</a></li>
-            </ul>
-          </div>
-          <div class="infoA">
-            <h2>SHOP</h2>
-            <ul>
-              <li><a href="#">Ev Products</a></li>
-              <li><a href="#">Cart & Checkout</a></li>
-              <li><a href="#">My Account</a></li>
-            </ul>
-          </div>
-          <div class="infoB">
-            <h2>CONTACT US</h2>
-            <ul>
-              <li><i class="fas fa-envelope-open-text"></i><a href="mailto: Primeev@gmail.com">Primeev@gmail.com</a></li>
-              <li><i class="fas fa-phone-alt"></i><a href="#" style="font-family:sans-serif;">20123456789</a></li>
-              <li><i class="fab fa-facebook"></i><a href="#"  aria>Prime Ev Egypt</a></li>
-            </ul>
-          </div>
+  <div class="leftPart">
+    <div id="upperPart">
+      <div class="infoA">
+        <h2>COMPANY</h2>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
       </div>
-      <div id = "lowerPart">
-        <div id="labelSignup"><label>Sign up for our<br>newsletters</label></div>
-        <input type="text">
+      <div class="infoB">
+        <h2>EV INFO</h2>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Stations</a></li>
+          <li><a href="#">Charging Card</a></li>
+        </ul>
+      </div>
+      <div class="infoA">
+        <h2>SHOP</h2>
+        <ul>
+          <li><a href="#">Ev Products</a></li>
+          <li><a href="#">Cart & Checkout</a></li>
+          <li><a href="#">My Account</a></li>
+        </ul>
+      </div>
+      <div class="infoB">
+        <h2>CONTACT US</h2>
+        <ul>
+          <li><i class="fas fa-envelope-open-text"></i><a href="mailto: Primeev@gmail.com">Primeev@gmail.com</a></li>
+          <li><i class="fas fa-phone-alt"></i><a href="#" style="font-family:sans-serif;">20123456789</a></li>
+          <li><i class="fab fa-facebook"></i><a href="#" aria>Prime Ev Egypt</a></li>
+        </ul>
       </div>
     </div>
-    <div class="rightPart">
-        <p>FOR AN INTELLIGENT<br>ENERGY DAILY PRIME EV IS<br>THE SMART CHOICE</p>
-        <img id='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+    <div id="lowerPart">
+      <div id="labelSignup"><label>Sign up for our<br>newsletters</label></div>
+      <input type="text">
     </div>
+  </div>
+  <div class="rightPart">
+    <p>FOR AN INTELLIGENT<br>ENERGY DAILY PRIME EV IS<br>THE SMART CHOICE</p>
+    <img id='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+  </div>
 </footer>
 
 {% block jsScripts %}{% endblock%}

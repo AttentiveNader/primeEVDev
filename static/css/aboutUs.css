@@ -1,0 +1,114 @@
+*{
+    font-family: 'Baskervville';
+}
+
+h1{
+    margin-left: 6%;
+    font-weight: bold;
+    font-size: 250%;
+}
+
+.aboutUsContainer{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+    font-size: 120%;
+}
+
+.aboutUsContainer > .explore{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.aboutUsContainer > .explore  p{
+    text-align: left;
+}
+
+.aboutUsContainer > .explore > #vision{
+    float: left;
+}
+
+.aboutUsContainer > .explore > #mission{
+    float: right;
+}
+
+.aboutUsContainer > .partners {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.aboutUsContainer > .partners > p, .aboutUsContainer>.partners>h2{
+    text-align: left;
+}
+
+.aboutUsContainer > .partners > .partnersLogos{
+    display: inline;
+    text-align: center;
+}
+
+.aboutUsContainer > .partners > .partnersLogos > img{
+    margin-right: 5%;
+    width: 300px;
+}
+
+.aboutUsContainer  .solutions{
+    width: 100%;
+}
+
+.aboutUsContainer  .solutions > img{
+    width: 50%;
+    margin-left: 30%;
+}
+
+@media (max-width: 600px) {
+    
+    h1{
+        margin-left: 6%;
+        font-weight: bold;
+        font-size: 200%;
+    }
+    
+    .aboutUsContainer{
+        margin-left: 5%;
+        margin-right: 5%;
+        display: block;
+        font-size: 120%;
+    }
+    
+    .aboutUsContainer > .explore{
+        display: block;
+    }
+    
+    .aboutUsContainer > .explore  p{
+        text-align: left;
+    }
+    
+    
+    .aboutUsContainer > .partners {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .aboutUsContainer > .partners > p, .aboutUsContainer>.partners>h2{
+        text-align: left;
+    }
+    
+    .aboutUsContainer > .partners > .partnersLogos{
+        display: block;
+        text-align: center;
+    }
+    
+    .aboutUsContainer > .partners > .partnersLogos > img{
+        margin-top: 5%;
+        width: 200px;
+
+    }
+    
+    .aboutUsContainer  .solutions > img{
+        width: 300px;
+        margin-left: 20px;
+    }
+}

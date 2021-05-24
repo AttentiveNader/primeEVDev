@@ -2,6 +2,7 @@
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Baskervville';
 }
 
 /* html, body {
@@ -234,7 +235,7 @@ body {
 }
 .secSection .btn:hover,
 .secSection .btn:focus {
-  color: #333;
+  color: #dc5718;
   text-decoration: none;
 }
 .secSection .btn:active {
