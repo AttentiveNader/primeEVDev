@@ -94,12 +94,12 @@ body {
         max-width: 240px;
     } 
 }
-
-@media (max-width:600px) {
+@media (max-width:951px) {
     .nav>.nav-header>.nav-title {
         max-width: 200px;
     } 
 }
+
 
 .nav>.nav-header>.nav-title>img {
     height: 80%;
@@ -120,8 +120,8 @@ body {
 } */
 .nav>.nav-links {
     display: block;
-    font-size: 150%;
-    margin-top: 50px;
+    font-size: 130%;
+    margin-top: 30px;
     float: right;
     margin-right: 50px;
 }
@@ -151,6 +151,7 @@ body {
     font-size: 150%;
     margin-top: 3%;
     margin-right: 4%;
+    margin-left:20%;
 }
 
 .nav .sign-links>a {
@@ -288,6 +289,9 @@ footer img {
     .nav {
         height: 130px;
     }
+    :root{
+        --navbar-height: 130px;
+    }
 
     .nav>.nav-btn {
         display: inline-block;
@@ -295,7 +299,24 @@ footer img {
         right: 0px;
         top: 0px;
     }
+    .nav>.nav-header>.nav-title {
+        max-width: 200px;
+    } 
+    .nav .sign-links {
+        display: inline;
+        float: right;
+        margin-top: -4px;
+    }
 
+    .nav>.nav-header {
+        width:100%;
+    }
+    .nav .sign-links {
+        margin-right: 20px;
+        margin-left:20px;
+        padding-top: -20px;
+    }
+    
     .nav>.nav-btn>label {
         display: inline-block;
         width: 50px;
@@ -315,12 +336,7 @@ footer img {
         border-top: 3px solid #ffffff;
     }
 
-    .nav>.sign-links {
-        display: inline;
-        float: right;
-        margin-top: -4px;
-    }
-
+    
     .nav>.sign-links>a,
     .nav>.sign-links>span {
         font-size: 17px;

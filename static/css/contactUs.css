@@ -24,13 +24,14 @@
 }
 .information-row{
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 27px;
 }
 .contact-information{
     float: left;
     min-width: 300px;
     margin-right: 40px;
     padding-top:60px;
+    margin-bottom: 20px;
     
 }
 .contact-grid{
@@ -43,6 +44,12 @@
         display: grid; 
         grid-template-columns: 100%;
         color:var(--contactColor);
+    }
+    .contact-information {
+        float: left;
+        min-width: 300px;
+        margin-right: 0;
+        padding-top: 0;
     }
 }
 .contact-form{
