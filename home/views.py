@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.views.decorators.cache import never_cache
+from .forms import UserRegisterationForm, UserLogInForm
 
 # Create your views here.
 
@@ -12,10 +14,12 @@ def contactUs(request):
     return render(request, 'homePage/contactUs.html')
 
 @never_cache
-def signIn(request):
-    return render(request, 'logInSignUp/LogIn.html')
-
-@never_cache
 def signUp(request):
-    return render(request, 'logInSignUp/SignUp.html')
-
+    if request.method == 'POST':
+        form = UserRegisterationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = UserRegisterationForm()
+    return render(request, 'registration/SignUp.html', {'form': form})

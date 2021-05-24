@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/LoginSignup.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>sign-up</title>
+</head>
+<body>
+    <div class="log-in">
+        <img class='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+        <div class="content">
+            <form method="POST">
+                {% csrf_token %}
+                    {{ form }}
+                <div class='submit-div'>
+                    <button type="submit" class="special-btn">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+            <div class = "border-top pt-3">
+                <small class="text-muted">
+                    Already have an account ?
+                    <a class="ml-2" href="{% url 'signIn' %}">
+                        Sign In
+                    </a>
+                </small>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
+
+
+
+<!-- <input class='special-input' type="text" placeholder="Username" name="username" required>
+<input class='special-input' type="text" placeholder="Email" name="email" required>
+<input class='special-input' type="password" placeholder="Password" name="psw" required>
+<input class='special-input' type="password" placeholder="Confirm Password" name="psw-repeat" required>
+<div class="remember-me">
+    <button type="submit" class="special-btn">SignUp</button>
+</div>
+<a class="sign-up" href='#'>LogIn</a> -->

@@ -28,16 +28,27 @@
       </label>
     </div>
       <div class = "sign-links">
-        <a href="../Sign-Up/">Sign Up</a>
-        <span style="color: #FFFFFF;">| </span>
-        <a href="../Sign-In">Login</a>
+        {% if user.is_authenticated %}
+          <span  style='color: #fff;'>
+            Welcome, {{ user.username }}
+          </span>
+          <a href="{% url 'logout' %}">
+            Log out
+          </a>
+        {% else %}
+          <a href="{% url 'signUp' %}">
+            Sign Up
+          </a>
+          <span style="color: #FFFFFF;">| </span>
+          <a href="{% url 'signIn' %}">Login</a>
+        {% endif %}
       </div>
       <div class="nav-links">
         <a href="../">Home</a>
         <a href="#">About Us</a>
         <a href="#">How It Works</a>
         <a href="#">Services</a>
-        <a href="../contactUs/">Contact Us</a>
+        <a href="{% url 'contactUs' %}">Contact Us</a>
         <a  href="#">Blog</a>
         <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
       </div>    

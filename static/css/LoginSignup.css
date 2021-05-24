@@ -61,11 +61,17 @@ label{
     padding: 15px 32px;
 }
 
+.submit-div{
+    margin: 0 auto;
+}
+
 .special-btn{
-    margin-left: 7.2em;
+    margin: 0 auto;
+
     background-color:#dc5718;
     border: none;
     padding: 15px 32px;
+    margin-bottom: 1em;
 }
 
 .memeber{
