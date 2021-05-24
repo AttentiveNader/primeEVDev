@@ -21,4 +21,8 @@ def signUp(request):
 
 @never_cache
 def aboutUs(request):
+<<<<<<< Updated upstream
     return render(request, 'homePage/aboutUs.html')
+=======
+    return render(request, 'homePage/aboutUs.html')
+>>>>>>> Stashed changes
