@@ -1,13 +1,6 @@
 
 
-:root {
-    --input-border: #8b8a8b;
-    --input-focus-h: 245;
-    --input-focus-s: 100%;
-    --input-focus-l: 42%;
-    --success-color:#22bb33;
-    --contactColor: #1c1c3d;
-  }
+
 *,
 *::before,
 *::after {

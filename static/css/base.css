@@ -24,11 +24,13 @@
 body {
     margin: 0px;
     background-color: #FFFFFF;
-    font-family: 'segoe ui';
     margin-top: var(--navbar-height);
     height: 100%;
 }
 
+body * {
+    font-family: "Baskervville" ;
+}
 /* =============== Navbar =================== */
 .nav {
     font-family: "Baskervville";
@@ -94,11 +96,34 @@ body {
         max-width: 240px;
     }
 }
-
-@media (max-width:951px) {
+@media (max-width:970px) {
     .nav>.nav-header>.nav-title {
         max-width: 200px;
     }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 800px)  {
+    
+    footer .rightPart {
+        /* width: 50%; */
+        float: right;
+        text-align: right;
+    }
+   
+    footer .rightPart p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        position: relative;
+        right: -140px;
+        width: 50%;
+
+    }
+    footer .rightPart img{
+        width:15em;
+    }
+
 }
 
 
