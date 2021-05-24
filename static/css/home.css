@@ -235,7 +235,7 @@ body {
 }
 .secSection .btn:hover,
 .secSection .btn:focus {
-  color: #dc5718;
+  color: var(--their-orange);
   text-decoration: none;
 }
 .secSection .btn:active {
