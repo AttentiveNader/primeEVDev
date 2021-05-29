@@ -23,14 +23,18 @@ h1{
 
 .aboutUsContainer > .explore  p{
     text-align: left;
+    width: 75%;
+    margin-left: 19%;
 }
 
 .aboutUsContainer > .explore > #vision{
     float: left;
+    width: 50%
 }
 
 .aboutUsContainer > .explore > #mission{
     float: right;
+    width: 50%;
 }
 
 .aboutUsContainer > .partners {
@@ -60,6 +64,7 @@ h1{
 .aboutUsContainer  .solutions > img{
     width: 50%;
     margin-left: 30%;
+    margin-top: 1%;
 }
 
 @media (max-width: 600px) {
@@ -80,9 +85,19 @@ h1{
     .aboutUsContainer > .explore{
         display: block;
     }
+
+    .aboutUsContainer > .explore > #vision{
+        width: 100%
+    }
+    
+    .aboutUsContainer > .explore > #mission{
+        width: 100%;
+    }
     
     .aboutUsContainer > .explore  p{
-        text-align: left;
+        text-align:center;
+        width: 81%;
+        margin:auto;
     }
     
     

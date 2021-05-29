@@ -20,6 +20,9 @@ def signUp(request):
 @never_cache
 def aboutUs(request):
     return render(request, 'homePage/aboutUs.html')
+@never_cache
+def info(request):
+    return render(request, 'homePage/info.html')
 
 @never_cache
 def signUp(request):

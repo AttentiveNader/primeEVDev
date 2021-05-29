@@ -90,43 +90,6 @@ body * {
     max-width: 350px;
 }
 
-
-@media (max-width:1100px) {
-    .nav>.nav-header>.nav-title {
-        max-width: 240px;
-    }
-}
-@media (max-width:970px) {
-    .nav>.nav-header>.nav-title {
-        max-width: 200px;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 800px)  {
-    
-    footer .rightPart {
-        /* width: 50%; */
-        float: right;
-        text-align: right;
-    }
-   
-    footer .rightPart p {
-        font-size: 18px;
-        margin-bottom: 30px;
-        position: relative;
-        right: -140px;
-        width: 50%;
-
-    }
-    footer .rightPart img{
-        width:15em;
-    }
-
-}
-
-
 .nav>.nav-header>.nav-title>img {
     height: 80%;
     width: 100%;
@@ -193,6 +156,10 @@ body * {
 }
 
 .nav>#nav-check {
+    display: none;
+}
+
+#phoneNavBar{
     display: none;
 }
 
@@ -290,10 +257,10 @@ footer>.leftPart>#upperPart h2 {
 }
 
 .rightPart>p {
-    font-size: 25px;
+    font-size: 21px;
     width: auto;
     color: #ffffff;
-    padding-top: 15px;
+    padding-top: 40px;
     padding-left: 1%;
 }
 
@@ -313,8 +280,20 @@ footer img {
 /*****Mobile View*****/
 
 @media (max-width: 600px) {
+    
 
     /***** NavBar******/
+    #pcCred{
+        display: none;
+    }
+    #pcNav{
+        display: none;
+    }
+    #phoneNavBar{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
     .nav {
         height: 130px;
     }
@@ -337,17 +316,13 @@ footer img {
     .nav .sign-links {
         display: inline;
         float: right;
-        margin-top: -4px;
+        margin-top: 4%;
+        font-size: 1em;
+        margin-right: 20%;
     }
 
     .nav>.nav-header {
         width: 100%;
-    }
-
-    .nav .sign-links {
-        margin-right: 20px;
-        margin-left: 20px;
-        padding-top: -20px;
     }
 
     .nav>.nav-btn>label {
@@ -368,13 +343,10 @@ footer img {
         height: 10px;
         border-top: 3px solid #ffffff;
     }
-
-
-    .nav>.sign-links>a,
-    .nav>.sign-links>span {
-        font-size: 17px;
+    #shopping-cart{
+        margin-left: 45%;
+        margin-top: 2%;
     }
-
     .nav>.nav-links {
         position: absolute;
         display: block;
@@ -391,6 +363,7 @@ footer img {
         display: block;
         width: 100%;
         height: fit-content;
+        padding-top: 2%;
     }
 
     .nav>#nav-check:not(:checked)~.nav-links {
@@ -524,4 +497,39 @@ footer img {
         margin-top: 135px;
         margin-right: -6%;
     }
+}
+
+@media (max-width:1100px) {
+    .nav>.nav-header>.nav-title {
+        max-width: 240px;
+    }
+}
+@media (max-width:970px) {
+    .nav>.nav-header>.nav-title {
+        max-width: 200px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 800px)  {
+    
+    footer .rightPart {
+        /* width: 50%; */
+        float: right;
+        text-align: right;
+    }
+   
+    footer .rightPart p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        position: relative;
+        right: -140px;
+        width: 50%;
+
+    }
+    footer .rightPart img{
+        width:15em;
+    }
+
 }
