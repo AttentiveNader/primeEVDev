@@ -62,12 +62,13 @@
       <!---------------------FOR THE SMALL SCREENS--------------------------------------------->
       
       <div class="nav-links" id="phoneNavBar">
-        <a href="../">Home</a>
+        <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'aboutUs' %}">About Us</a>
         <a href="#">How It Works</a>
         <a href="#">Services</a>
         <a href="{% url 'contactUs' %}">Contact Us</a>
         <a  href="#">Blog</a>
+        <a  href="{% url 'info' %}">Info</a>
         <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
         <div class = "sign-links">
           {% if user.is_authenticated %}

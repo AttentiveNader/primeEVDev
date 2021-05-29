@@ -12,7 +12,9 @@
 </head>
 <body>
     <div class="log-in">
-        <img class='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+        <a href="{% url 'home' %}">
+            <img class='logo' src="{% static 'imgs/Main Page Logo1.png' %}" alt="logo">
+        </a>
         <div class="content">
             <form method="POST">
                 {% csrf_token %}
