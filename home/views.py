@@ -49,5 +49,5 @@ def signUp(request):
             5. Login using this user
         """
         return redirect('home')
-    return render(request, 'registration/SignUp.html')
+    return render(request, 'registration/SignUp.html', {'form': form})
 
