@@ -35,20 +35,9 @@
 
       
       <div class = "sign-links" id="pcCred">
-        {% if user.is_authenticated %}
-          <span  style='color: #fff;'>
-            Welcome, {{ user.username }}
-          </span>
-          <a href="{% url 'logout' %}">
-            Log out
-          </a>
-        {% else %}
           <a href="{% url 'signUp' %}">
             Sign Up
           </a>
-          <span style="color: #FFFFFF;">| </span>
-          <a href="{% url 'login' %}">Login</a>
-        {% endif %}
       </div>
       <div class="nav-links" id="pcNav">
         <a href="../">Home</a>
@@ -71,20 +60,9 @@
         <a  href="{% url 'info' %}">Info</a>
         <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
         <div class = "sign-links">
-          {% if user.is_authenticated %}
-            <span  style='color: #fff;'>
-              Welcome, {{ user.username }}
-            </span>
-            <a href="{% url 'logout' %}">
-              Log out
-            </a>
-          {% else %}
             <a href="{% url 'signUp' %}">
               Sign Up
             </a>
-            <span style="color: #FFFFFF;">| </span>
-            <a href="{% url 'login' %}">Login</a>
-          {% endif %}
         </div>
       </div>
 

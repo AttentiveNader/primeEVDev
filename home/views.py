@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+
 from django.contrib import messages
 from django.views.decorators.cache import never_cache
 from .forms import UserRegistrationForm
@@ -12,10 +13,6 @@ def home(request):
 @never_cache
 def contactUs(request):
     return render(request, 'homePage/contactUs.html')
-
-@never_cache
-def signUp(request):
-    return render(request, 'logInSignUp/SignUp.html')
 
 @never_cache
 def aboutUs(request):
