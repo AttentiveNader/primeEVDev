@@ -11,51 +11,51 @@
 <div class='info'>
     <h3 class="info">Personal Info</h3>
     <div class="personal-info">
-        <input placeholder="First name" type="text"></input>
-        <input placeholder="Last name" type="text"></input>
-        <input placeholder="Email" type="email"></input>
-        <input placeholder="Phone number" type="tel"></input>
-        <div class = "gender">  
-            <input type = "radio" name = "Gender">
+        <input name = "fname" placeholder="First name" type="text"></input>
+        <input name = "lname" placeholder="Last name" type="text"></input>
+        <input name = "email" placeholder="Email" type="email"></input>
+        <input name = "nb" placeholder="Phone number" type="tel"></input>
+        <div name = 'gender' class = "gender">  
+            <input value = 'True' type = "radio" name = "Gender">
             <label>Male</label>
-            <input type = "radio" name = "Gender">
+            <input value = 'False' type = "radio" name = "Gender">
             <label>Female</label>
         </div>
         <input placeholder="Address" type="text"></input>
     </div>
     <h3 class="details-header">Car details</h3>
     <div class="details">
-        <select placeholder="Car brand">
+        <select name = 'brand' placeholder="Car brand">
             <option disabled selected>Select Car Brand</option>
-            <option>BMW</option>
-            <option>Mercedes-Benz</option>
-            <option>Porsche</option>
-            <option>Tesla</option>
-            <option>Volvo</option>
-            <option>Audi i</option>
-            <option>Land Rover</option>
-            <option>Range Rover</option>
-            <option>Volkswagen</option>
-            <option>Ford</option>
-            <option>Jaguar</option>
-            <option>Fiat</option>
-            <option>Kia</option>
-            <option>Opel</option> 
-            <option>Nissan</option>
-            <option>Toyota</option>
-            <option>BYD</option>
-            <option>Hyundai</option>
-            <option>Jac</option>
-            <option>Renault</option>
-            <option>Ssang young</option>
-            <option>Mitsubishi</option>
-            <option>Chevrolet</option>
-            <option>Jeep</option>
-            <option>Seat</option>
-            <option>Other</option>
+            <option value = "BMW">BMW</option>
+            <option value = "Mercedes-Benz">Mercedes-Benz</option>
+            <option value = "Porsche">Porsche</option>
+            <option value = "Tesla">Tesla</option>
+            <option value = "Volvo">Volvo</option>
+            <option value = "Audi">Audi</option>
+            <option value = "Land Rover">Land Rover</option>
+            <option value = "Range Rover">Range Rover</option>
+            <option value = "Volkswagen">Volkswagen</option>
+            <option value = "Ford">Ford</option>
+            <option value = "Jaguar">Jaguar</option>
+            <option value = "Fiat">Fiat</option>
+            <option value = "Kia">Kia</option>
+            <option value = "Opel">Opel</option> 
+            <option value = "Nissan">Nissan</option>
+            <option value = "Toyota">Toyota</option>
+            <option value = "BYD">BYD</option>
+            <option value = "Hyundai">Hyundai</option>
+            <option value = "Jac">Jac</option>
+            <option value = "Renault">Renault</option>
+            <option value = "Ssang young">Ssang young</option>
+            <option value = "Mitsubishi">Mitsubishi</option>
+            <option value = "Chevrolet">Chevrolet</option>
+            <option value = "Jeep">Jeep</option>
+            <option value = "Seat">Seat</option>
+            <option value = "Other">Other</option>
         </select>
-        <input placeholder="Car type" type="text"></input>
-        <select placeholder="Car brand">
+        <input name = 'carType' placeholder="Car type" type="text"></input>
+        <select name = 'bRange' placeholder="Car brand">
             <option disabled selected>Select Battery Range</option>
             <option>50</option>
             <option>100</option>
@@ -66,7 +66,7 @@
             <option>350</option>
             <option>400</option>
         </select>
-        <label id = "cpyLicense">Copy of the car license</label>
+        <label name = 'license' id = "cpyLicense">Copy of the car license</label>
         <input placeholder="Car license" type="file" accept="image/*"></input>
     </div>
     <button id = "send">Send</button>
