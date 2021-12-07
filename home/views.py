@@ -18,10 +18,10 @@ def contactUs(request):
 def aboutUs(request):
     return render(request, 'homePage/aboutUs.html')
 @never_cache
-def info(request):
+def register(request):
     return render(request, 'homePage/info.html')
 
-@never_cache
+"""@never_cache
 def signUp(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
@@ -30,5 +30,5 @@ def signUp(request):
             return redirect('home')
     else:
         form = UserRegistrationForm()
-    return render(request, 'registration/SignUp.html', {'form': form})
+    return render(request, 'registration/SignUp.html', {'form': form})"""
 

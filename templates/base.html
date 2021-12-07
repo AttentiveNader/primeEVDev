@@ -35,8 +35,8 @@
 
       
       <div class = "sign-links" id="pcCred">
-          <a href="{% url 'signUp' %}">
-            Sign Up
+          <a href="{% url 'register' %}">
+            Register
           </a>
       </div>
       <div class="nav-links" id="pcNav">
@@ -45,7 +45,6 @@
         <a href="#">How It Works</a>
         <a href="#">Services</a>
         <a href="{% url 'contactUs' %}">Contact Us</a>
-        <a  href="{% url 'info' %}">Info</a>
         <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
       </div>    
       <!---------------------FOR THE SMALL SCREENS--------------------------------------------->
@@ -57,11 +56,10 @@
         <a href="#">Services</a>
         <a href="{% url 'contactUs' %}">Contact Us</a>
         <a  href="#">Blog</a>
-        <a  href="{% url 'info' %}">Info</a>
         <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
         <div class = "sign-links">
-            <a href="{% url 'signUp' %}">
-              Sign Up
+            <a href="{% url 'register' %}">
+              Register
             </a>
         </div>
       </div>
