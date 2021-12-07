@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.decorators.cache import never_cache
 
-from primeEVDev.home.models import Member
+from .models import Member
 from .forms import UserRegistrationForm
 
 # Create your views here.
@@ -51,6 +51,7 @@ def registerForm(request):
                 license = request.POST.get('license')
             )
             member.save()
+        return redirect('/')
 
 
 """@never_cache

@@ -1,3 +1,4 @@
+from django.conf.urls import url
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
@@ -11,6 +12,6 @@ urlpatterns = [
     path('contactUs/', views.contactUs, name='contactUs'),
     path('Register/', views.register , name='register'), #TODO Change to new registration page
     path('aboutUs/',views.aboutUs, name='aboutUs'),
-
+    url(r'^registerForm/$', views.registerForm, name='registerForm'),
 ]
 
