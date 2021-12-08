@@ -1,59 +1,63 @@
-
 {% extends 'base.html' %}
 {% load static %}
-{% block headscripts %} 
+{% block headscripts %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock%}
-{% block jsScripts %} 
+{% block jsScripts %}
 <script src="{% static 'js/home.js' %}">
 </script>
 {% endblock %}
 
 {% block title %} PrimeEV charger {% endblock %}
-{% block content %} 
+{% block content %}
 <div>
-<div class="slider">
- <span id="rightArrow" onclick="Slide('right')"><img class="carousel-arrow" src="{% static 'imgs/carousel-arrow.png' %}"/></span>
- <span id="leftArrow" onclick="Slide('left')"><img class="carousel-arrow" src="{% static 'imgs/carousel-arrow.png' %}"/></span>
-  <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
-  <input type="radio" name="slider" title="slide2" class="slider__nav"/>
-  <input type="radio" name="slider" title="slide3" class="slider__nav"/>
-  {% comment %} <input type="radio" name="slider" title="slide4" class="slider__nav"/> {% endcomment %}
-  <div id="slides" class="slider__inner">
-    <div class="slider__contents"><i class="slider__image fa fa-codepen"></i>
-      <h1 class="slider__caption">The Choice For The Future Starts Today</h1>
-      <p class="slider__txt"></p>
+  <div class="slider">
+    <span id="rightArrow" onclick="Slide('right')"><img class="carousel-arrow"
+        src="{% static 'imgs/carousel-arrow.png' %}" /></span>
+    <span id="leftArrow" onclick="Slide('left')"><img class="carousel-arrow"
+        src="{% static 'imgs/carousel-arrow.png' %}" /></span>
+    <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+    <input type="radio" name="slider" title="slide2" class="slider__nav" />
+    <input type="radio" name="slider" title="slide3" class="slider__nav" />
+    {% comment %} <input type="radio" name="slider" title="slide4" class="slider__nav" /> {% endcomment %}
+    <div id="slides" class="slider__inner">
+      <div class="slider__contents"><i class="slider__image fa fa-codepen"></i>
+        <h1 class="slider__caption">The Choice For The Future Starts Today</h1>
+        <p class="slider__txt"></p>
+      </div>
+      <div class="slider__contents"><i class="slider__image fa fa-newspaper-o"></i>
+        <h1 class="slider__caption"></h1>
+        <p class="slider__txt"></p>
+      </div>
+      <div class="slider__contents"><i class="slider__image fa fa-television"></i>
+        <h1 class="slider__caption"></h1>
+        <p class="slider__txt"></p>
+      </div>
     </div>
-    <div class="slider__contents"><i class="slider__image fa fa-newspaper-o"></i>
-      <h1 class="slider__caption"></h1>
-      <p class="slider__txt"></p>
-    </div>
-    <div class="slider__contents"><i class="slider__image fa fa-television"></i>
-      <h1 class="slider__caption"></h1>
-      <p class="slider__txt"></p>
-    </div>
-  </div>
   </div>
 </div>
 
-  <div class="secSection">
-    <div class="about-us-container">
-      <div class="about-us-header">
-        <img />
-        <h1>About Us</h1>
-      </div>
-      <p>
-      Prime EV was established in 2021 with the insistence to be part of  developing the environment by putting everyone in an electric vehicle and to develop Egypt’s electric vehicle charging network. We are working on creating the most smart, reliable and convenient EV charging stations in Egypt. With Prime EV you will live a more comfortable life.
-      </p>
-      {% comment %} todo
-        change the href when the endpoint is made
-      {% endcomment %}
-      <a href="{% url 'aboutUs' %}" class="btn">Read More</a>
+<div class="secSection">
+  <div class="about-us-container">
+    <div class="about-us-header">
+      <img />
+      <h1>About Us</h1>
     </div>
-    <div class="partners-container">
-      <div class="partners-header">
-          <h1>Partners</h1>
-      </div>
+    <p>
+      Prime EV was established in 2021 with the insistence to be part of developing the environment by putting everyone
+      in an electric vehicle and to develop Egypt’s electric vehicle charging network. We are working on creating the
+      most smart, reliable and convenient EV charging stations in Egypt. With Prime EV you will live a more comfortable
+      life.
+    </p>
+    {% comment %} todo
+    change the href when the endpoint is made
+    {% endcomment %}
+    <a href="{% url 'aboutUs' %}" class="btn">Read More</a>
+  </div>
+  <div class="partners-container">
+    <div class="partners-header">
+      <h1>Partners</h1>
+    </div>
     <div class="partner-logos">
       <span>
         <img src="{% static 'imgs/Partner logo.png' %}" />
@@ -62,25 +66,25 @@
         <img src="{% static 'imgs/Partner logo 2.png' %}" />
       </span>
     </div>
-    </div>
-  </div> 
+  </div>
+</div>
 
-  <div class="products-section">
-    <h1>EV Charging Products</h1>
-    <div class="products">
+<div class="products-section">
+  <h1>EV Charging Products</h1>
+  <div class="products">
     <div>
-      <img/>
+      <img />
       <h3>Name</h3>
       <p>Description</p>
-      <a class="btn">Find Out  More</a>
+      <a class="btn">Find Out More</a>
     </div>
     <div>
-      <img/>
+      <img />
       <h3>Name</h3>
       <p>Description</p>
-      <a class="btn">Find Out  More</a>
-    </div>
+      <a class="btn">Find Out More</a>
     </div>
   </div>
+</div>
 
 {% endblock %}

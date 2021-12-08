@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/info.css' %}">
 {% endblock%}
 {% block jsScripts %} 
+<script src="{% static 'js/info.js' %}"></script>
 {% endblock %}
 
 {% block title %} PrimeEV charger {% endblock %}
@@ -20,17 +21,17 @@
     <h3 class="info">Personal Info</h3>
     <div class="personal-info">
         
-        <input name = "fname" placeholder="First name" type="text"></input>
-        <input name = "lname" placeholder="Last name" type="text"></input>
-        <input name = "email" placeholder="Email" type="email"></input>
-        <input name = "nb" placeholder="Phone number" type="tel"></input>
+        <input name = "fname" placeholder="First name" type="text" required></input>
+        <input name = "lname" placeholder="Last name" type="text" required></input>
+        <input id = "email" name = "email" placeholder="Email" type="email" required></input>
+        <input id = "nb" name = "nb" placeholder="Phone number" type="tel" required></input>
         <div name = 'gender' class = "gender">  
             <input value = 'True' type = "radio" name = "Gender">
             <label>Male</label>
             <input value = 'False' type = "radio" name = "Gender">
             <label>Female</label>
         </div>
-        <input placeholder="Address" type="text"></input>
+        <input placeholder="Address" type="text" required></input>
     </div>
     <h3 class="details-header">Car details</h3>
     <div class="details">
@@ -78,7 +79,7 @@
         <label id = "cpyLicense">Copy of the car license</label>
         <input name = 'img' placeholder="Car license" type="file" accept="image/*"></input>
     </div>
-    <input id = "send" value = "Register" type = "submit" >
+    <input id = "send" value = "Register" type = "submit" onclick="validateNB(document.getElementById('nb').innerHTML)">
 </form>
 </div>
 
