@@ -10,6 +10,7 @@ class MemberAdmin(admin.ModelAdmin):
 
     def has_delete_permission(self, request, obj=None):
         return False"""
+    list_filter = ("has_card",)
 
 
 

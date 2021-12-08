@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.views.decorators.cache import never_cache
 
 from .models import Member
+from django.core.files.storage import FileSystemStorage
 from .forms import UserRegistrationForm
 
 # Create your views here.
@@ -33,8 +34,9 @@ def registerForm(request):
         return render(request, template, {'form': form, 'errorMsg': 'Email already exists'})
 
     else:
-        if request.method == "POST":
+        if request.method == "POST" and request.FILES['img']:
             gender = False
+            upload = request.FILES.get('img')
             if request.POST.get('gender') == "true":
                     gender = True
 
@@ -48,7 +50,7 @@ def registerForm(request):
                 car_type = request.POST.get('carType'),
                 battery_range = request.POST.get('bRange'),
                 has_card = False,
-                license = request.POST.get('license')
+                license = upload,
             )
             member.save()
         return redirect('/')

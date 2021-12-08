@@ -12,7 +12,11 @@
     {% if errorMsg %}
         <p class="errorMessage" style="color: red;">{{ errorMsg }}</p>
     {% endif %}
-    <form action="{% url 'registerForm' %}">
+    <form method="POST" action="{% url 'registerForm' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if errorMsg %}
+        <p class="errorMessage" style="color: red;">{{ errorMsg }}</p>
+        {% endif %}
     <h3 class="info">Personal Info</h3>
     <div class="personal-info">
         
@@ -71,8 +75,8 @@
             <option>350</option>
             <option>400</option>
         </select>
-        <label name = 'license' id = "cpyLicense">Copy of the car license</label>
-        <input placeholder="Car license" type="file" accept="image/*"></input>
+        <label id = "cpyLicense">Copy of the car license</label>
+        <input name = 'img' placeholder="Car license" type="file" accept="image/*"></input>
     </div>
     <input id = "send" value = "Register" type = "submit" >
 </form>
