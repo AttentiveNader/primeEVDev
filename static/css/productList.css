@@ -1,0 +1,79 @@
+.cards-container{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30vw;
+    min-width: 300px;
+    height: 70%;
+    margin: 2%;
+    padding: 3%;
+    background-image: linear-gradient(to left,
+            #1d3159 0%,
+            11.502347141504288%,
+            #3f476b 23.004694283008575%,
+            27.288732677698135%,
+            #4b5173 31.572771072387695%,
+            32.45305269956589%,
+            #4e5475 33.33333432674408%,
+            36.73709034919739%,
+            #5b5e7e 40.140846371650696%,
+            47.30047136545181%,
+            #767591 54.46009635925293%,
+            60.856810212135315%,
+            #9594aa 67.2535240650177%,
+            68.25117468833923%,
+            #9a98ad 69.24882531166077%,
+            70.83333432674408%,
+            #a09eb3 72.41784334182739%,
+            75%,
+            #b0aebf 77.58215665817261%,
+            79.57746386528015%,
+            #b9b7c6 81.5727710723877%,
+            83.45070481300354%,
+            #bfbecb 85.32863855361938%,
+            85.79812347888947%,
+            #c5c4d0 86.26760840415955%,
+            87.67605721950531%,
+            #cecdd6 89.08450603485107%,
+            94.54225301742554%,
+            #f3f2f5 100%);
+}
+
+.card > h3{
+    color : #dc5718;
+    font-size: 2.5em;
+}
+
+.card > p{
+    color : #ffffff;
+    width: 100%;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.card>a{
+    text-decoration: none;
+    color: #000;
+    background-color: #dc5718;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .card{
+        padding:5%;
+    }
+    
+}

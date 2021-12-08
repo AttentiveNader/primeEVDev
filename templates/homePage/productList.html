@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block headscripts %} 
+<link rel="stylesheet" href="{% static 'css/productList.css' %}">
+{% endblock%}
+
+{% block jsScripts %} 
+{% endblock %}
+
+{% block title %} PrimeEV Products List {% endblock %}
+
+{% block content %} 
+    <div class="cards-container">
+        {% for product in products %}
+            {% comment %} <img src=" {{ product.image.url }}">
+            {{ product.name }}
+            {{ product.description }}
+            {{ product.socket_type }}
+            {{ product.number_of_sockets }}
+            {{ product.charging_power }}
+            {{ product.protection }}
+            {{ product.price }}
+            {{ product.category }}
+            {{ product.code }} {% endcomment %}
+            
+            <!--Redirect on click to page concerning this product-->
+            <div class="card">
+                <img src=" {{ product.image.url }}">
+                <h3> {{ product.name }} </h3>
+                <p> {{product.description}} </p>
+                <a href=" {% url '' %}">
+                    Read More
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

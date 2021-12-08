@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.decorators.cache import never_cache
 
-from .models import Member
+from .models import Member, Product
 from django.core.files.storage import FileSystemStorage
 from .forms import UserRegistrationForm
 
@@ -55,6 +55,12 @@ def registerForm(request):
             member.save()
         return redirect('/')
 
+
+def view_product_list(request):
+    context = {
+        'products': Product.objects.all()
+    }
+    return render(request, 'homePage/productList.html', context=context)
 
 """@never_cache
 def signUp(request):

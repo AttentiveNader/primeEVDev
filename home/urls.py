@@ -14,5 +14,7 @@ urlpatterns = [
     path('Register/', views.register , name='register'), #TODO Change to new registration page
     path('aboutUs/',views.aboutUs, name='aboutUs'),
     url(r'^registerForm/$', views.registerForm, name='registerForm'),
+    path('productList/', views.view_product_list, name="productList"),
+    
 ]
 

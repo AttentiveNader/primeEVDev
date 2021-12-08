@@ -45,7 +45,7 @@
         <a href="#">How It Works</a>
         <a href="#">Services</a>
         <a href="{% url 'contactUs' %}">Contact Us</a>
-        <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()">
+        <img id="shopping-cart" src="{% static 'imgs/shopping-cart.png' %}" alt="ShoppingCart" onmouseover="hover()" onmouseout="out()" onclick="window.location = {% url 'productList' %}">
       </div>    
       <!---------------------FOR THE SMALL SCREENS--------------------------------------------->
       
