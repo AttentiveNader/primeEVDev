@@ -2,6 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 
 
+
 # Create your models here.
 
 class Member(models.Model):
@@ -18,4 +19,19 @@ class Member(models.Model):
     car_type = models.CharField(max_length=50, null=False)
     battery_range = models.PositiveIntegerField(validators=[validate_battery_range])
     has_card = models.BooleanField(null=False, default=False)
-    license = models.ImageField(upload_to='images/')
+    license = models.ImageField(upload_to='images/license')
+    
+    
+class Product(models.Model):
+    image = models.ImageField(upload_to='images/product')
+    name = models.CharField(max_length=50, null=True, default="Not Working")
+    description = models.TextField(max_length=1000, null=False)
+    socket_type = models.CharField(max_length=50, null=False)
+    number_of_sockets = models.IntegerField()
+    charging_power = models.IntegerField()
+    protection = models.CharField(max_length=100, null=False)
+    ware_number = models.CharField(primary_key=True, max_length=100)
+    category = models.CharField(max_length=50)
+    price = models.IntegerField()
+    code = models.CharField(max_length=100)
+    
