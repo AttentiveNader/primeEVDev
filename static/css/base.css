@@ -24,7 +24,7 @@
 body {
     margin: 0px;
     background-color: #FFFFFF;
-    margin-top: var(--navbar-height);
+    /*margin-top: var(--navbar-height);*/
     height: 100%;
 }
 
@@ -34,8 +34,8 @@ body * {
 /* =============== Navbar =================== */
 .nav {
     font-family: "Baskervville";
-    /* height: 165px; */
-    height: var(--navbar-height);
+     height: 120px;
+    /*height: var(--navbar-height);*/
     z-index: 12000;
     top: 0;
     width: 100%;
@@ -92,7 +92,7 @@ body * {
 
 .nav>.nav-header>.nav-title>img {
     height: 80%;
-    width: 100%;
+    width: 65%;
 }
 
 .nav>.nav-btn {
@@ -109,10 +109,9 @@ body * {
 } */
 .nav>.nav-links {
     display: block;
-    font-size: 130%;
-    margin-top: 30px;
+    font-size: 1.4em;
+    margin-top: 85px;
     float: right;
-    margin-right: 50px;
 }
 
 .nav>.nav-links>a {
@@ -168,7 +167,7 @@ body * {
 footer {
     display: flex;
     flex-direction: row;
-    min-height: 300px;
+    height: 200px;
     width: 100%;
     background-color: #213259;
     overflow: hidden;
@@ -199,7 +198,7 @@ footer {
 
 footer>.leftPart>#upperPart h2 {
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 0.9em;
     color: #ffffff;
 }
 
@@ -257,11 +256,11 @@ footer>.leftPart>#upperPart h2 {
 }
 
 .rightPart>p {
-    font-size: 21px;
+    font-size: 14px;
     width: auto;
     color: #ffffff;
-    padding-top: 40px;
     padding-left: 1%;
+    padding-top: 20px;
 }
 
 footer i {
@@ -270,11 +269,10 @@ footer i {
 }
 
 footer img {
-    height: 8em;
-    width: 18em;
+    height: 6em;
+    width: 15em;
     margin-right: 30px;
     float: right;
-    margin-top: 5px;
 }
 
 /*****Mobile View*****/
@@ -283,6 +281,12 @@ footer img {
     
 
     /***** NavBar******/
+    body {
+        margin: 0px;
+        background-color: #FFFFFF;
+        margin-top: var(--navbar-height);
+        height: 100%;
+    }
     #pcCred{
         display: none;
     }
