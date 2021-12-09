@@ -30,9 +30,9 @@ class Product(models.Model):
     number_of_sockets = models.IntegerField()
     charging_power = models.IntegerField()
     protection = models.CharField(max_length=100, null=False)
-    ware_number = models.CharField(unique=True, max_length=100)
     category = models.CharField(max_length=50)
     price = models.IntegerField()
     code = models.CharField(unique=True, max_length=100)
+    ware_number = models.CharField(unique=True, max_length=100)
     
     

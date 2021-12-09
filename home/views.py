@@ -67,7 +67,7 @@ def product_details(request, product_id):
     context = {
         'product': Product.objects.filter(id=product_id)[0]
     }
-    return render(request, 'homePage/details.html', context=context)
+    return render(request, 'homePage/productDetails.html', context=context)
 
 """@never_cache
 def signUp(request):

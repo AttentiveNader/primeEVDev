@@ -30,7 +30,7 @@
                 <img src=" {{ product.image.url }}">
                 <h3> {{ product.name }} </h3>
                 <p> {{product.description}} </p>
-                <a href=" {% url 'productDetails' %}">
+                <a href=" {% url 'productDetails' product_id=product.id%}">
                     Read More
                 </a>
             </div>
