@@ -6,6 +6,11 @@
 *::after {
   box-sizing: border-box;
 }
+
+body {
+    margin-top: var(--navbar-height);
+}
+
 .contact-us-container{
     padding-left: 5%;
     padding-right: 5%;

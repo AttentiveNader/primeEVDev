@@ -2,6 +2,11 @@
     font-family: 'Baskervville';
 }
 
+
+body {
+    margin-top: var(--navbar-height);
+}
+
 h1{
     margin-left: 6%;
     font-weight: bold;
