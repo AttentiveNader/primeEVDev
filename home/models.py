@@ -36,3 +36,8 @@ class Product(models.Model):
     ware_number = models.CharField(unique=True, max_length=100)
     
     
+class Station(models.Model):
+    image = models.ImageField(upload_to='images/station')
+    name = models.CharField(max_length=50, null=True, default="out of service")
+    Available_Charger = models.CharField(max_length=50, null=False)
+    number_of_sockets = models.IntegerField()

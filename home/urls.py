@@ -15,6 +15,8 @@ urlpatterns = [
     path('aboutUs/',views.aboutUs, name='aboutUs'),
     url(r'^registerForm/$', views.registerForm, name='registerForm'),
     path('productList/', views.view_product_list, name="productList"),
-    path('<int:product_id>/details', views.product_details, name="productDetails")
+    path('<int:product_id>/details', views.product_details, name="productDetails"),
+    path('stations/', views.stations , name='stations')
+
 ]
 

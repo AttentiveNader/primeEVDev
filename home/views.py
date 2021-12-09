@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.decorators.cache import never_cache
 
-from .models import Member, Product
+from .models import Member, Product,Station
 from django.core.files.storage import FileSystemStorage
 from .forms import UserRegistrationForm
 
@@ -62,6 +62,12 @@ def view_product_list(request):
     }
     return render(request, 'homePage/productList.html', context=context)
 
+@never_cache
+def stations(request):
+    context = {
+        'stations': Station.objects.all()
+    }
+    return render(request, 'homePage/stations.html', context=context)
 
 def product_details(request, product_id):
     context = {

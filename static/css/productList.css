@@ -6,7 +6,24 @@
     align-content: center;
     flex-wrap: wrap;
 }
+body {
+    margin-top: var(--navbar-height);
+}
 
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button
+{
+    margin-top: 2.5em;
+    text-align: center;
+    width: em;
+    height: 3em;
+    border-style: groove;
+}
 .card{
     width: 30vw;
     min-width: 300px;
@@ -74,6 +91,18 @@ img{
 @media (max-width: 600px) {
     .card{
         padding:5%;
+    }
+    h1{
+        font-size: 1.3em;
+        margin-left: 0.7em;
+    }
+    button
+    {
+        margin-top: 2.5em;
+        text-align: center;
+        width: 6em;
+        height: 3em;
+        border-style: groove;
     }
     
 }

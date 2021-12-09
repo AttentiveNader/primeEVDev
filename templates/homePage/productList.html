@@ -10,6 +10,10 @@
 {% block title %} PrimeEV Products List {% endblock %}
 
 {% block content %} 
+    <div class="title">
+        <h1>EV Charging Products</h1>
+        <button>filter</button>
+    </div>
     <div class="cards-container">
         {% for product in products %}
             {% comment %} <img src=" {{ product.image.url }}">

@@ -10,8 +10,34 @@
 {% block title %} {{ product.name }} {% endblock %}
 
 
+
 {% block content %} 
-    <div class="">
-        
+    <div class="cards-container">
+        <h1>{{products.name}}</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+
+        {% for product in products %}
+            {{ product.name }}
+            {{ product.description }}
+            {{ product.socket_type }}
+            {{ product.number_of_sockets }}
+            {{ product.charging_power }}
+            {{ product.protection }}
+            {{ product.price }}
+            {{ product.category }}
+            {{ product.code }}             
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <img src=" {{ product.image.url }}">
+    
+            <a href=" {% url 'productDetails' product_id=product.id%}">
+                Read More
+            </a>
+            
+        {% endfor %}
     </div>
 {% endblock %}

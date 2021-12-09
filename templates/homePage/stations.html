@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block headscripts %} 
+<link rel="stylesheet" href="{% static 'css/stations.css' %}">
+{% endblock%}
+
+{% block title %} Stations {% endblock %}
+{% block content %}
+<h1>Stations</h1> 
+<div class="boss">
+
+
+{% for station in stations %}
+<div class="mainContainer">
+
+    <div class="disp">
+        <img src=" {{ station.image.url }}">
+        <button>Directions</button>
+    </div>
+
+    <div class="text">
+        <p>Available Chargers {{station.name}}</p>
+        <p>Number Of Sockets {{station.number_of_sockets}}</p>
+        <p class="special">Services Options</p>
+    </div>
+</div>
+{% endfor %}
+</div> 
+
+{% endblock %}
