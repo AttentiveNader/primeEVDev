@@ -13,7 +13,7 @@
     {% if errorMsg %}
         <p class="errorMessage" style="color: red;">{{ errorMsg }}</p>
     {% endif %}
-    <form method="POST" action="{% url 'registerForm' %}" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'registerForm' %}" enctype="multipart/form-data" id="infoForm">
         {% csrf_token %}
         {% if errorMsg %}
         <p class="errorMessage" style="color: red;">{{ errorMsg }}</p>
@@ -77,9 +77,9 @@
             <option>400</option>
         </select>
         <label id = "cpyLicense">Copy of the car license</label>
-        <input name = 'img' placeholder="Car license" type="file" accept="image/*"></input>
+        <input name = 'img' placeholder="Car license" type="file" accept="image/*" required></input>
     </div>
-    <input id = "send" value = "Register" type = "submit" onclick="validateNB(document.getElementById('nb').innerHTML)">
+    <input id = "send" value = "Register" type = "submit" >
 </form>
 </div>
 
